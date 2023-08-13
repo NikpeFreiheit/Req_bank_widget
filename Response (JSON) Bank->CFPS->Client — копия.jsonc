@@ -1,0 +1,140 @@
+//Фильтрация и сортировка по имени, типу карты и т.д. реализуется на стороне Front
+
+//Request (JSON) Bank->CFPS
+
+200 OK
+{
+    "cards": [
+        { 
+            // "issue_at": "DATE",// date "yyyy-mm-dd"
+            // "expire_at": "DATE",// date "yyyy-mm-dd"
+            "card_name": "SuperCard",
+            "card_type": "Visa", // "enum", one of VISA/MC(Master Card)<...>
+            "card_number": "1234",
+            "amount": "15.00",
+            "current_id": "eur", // "enum", one of rub, eur, usd<...>
+            "accounts": [
+                {
+                    "current_id": "eur", // "enum", one of rub, eur, usd<...>
+                    "last_amount": "15000.00",
+                    "transactions": [
+                        {
+                            // "transaction_at": "DATE",// date "yyyy-mm-dd"
+                            "amount": "100.87",
+                            "current_id": "eur", // "enum", one of rub, eur, usd<...>
+                            "type": "credit", // credit = "-"
+                            "name": "Carefour"
+                        },
+                        {
+                            // "transaction_at": "DATE",// date "yyyy-mm-dd"
+                            "amount": "100.87",
+                            "current_id": "eur", // "enum", one of rub, eur, usd<...>
+                            "type": "debit", // debit = "+"
+                            "name": "Salary"
+                        },
+                        {
+                            // "transaction_at": "DATE",// date "yyyy-mm-dd"
+                            "amount": "100.87",
+                            "current_id": "eur", // "enum", one of rub, eur, usd<...>
+                            "type": "credit", // credit = "-"
+                            "name": "Carefour"
+                        },
+                        {
+                            // "transaction_at": "DATE",// date "yyyy-mm-dd"
+                            "amount": "100.87",
+                            "current_id": "eur", // "enum", one of rub, eur, usd<...>
+                            "type": "debit", // debit = "+"
+                            "name": "Golden crow"
+                        }
+                    ]
+                },
+            ]
+        },
+        { 
+            // "issue_at": "DATE",// date "yyyy-mm-dd"
+            // "expire_at": "DATE",// date "yyyy-mm-dd"
+            "card_name": "Uberard",
+            "card_type": "MC", // "enum", one of VISA/MC(Master Card)<...>
+            "card_number": "4321",
+            "amount": "17.00",
+            "current_id": "eur", // "enum", one of rub, eur, usd<...>
+            "accounts": [
+                {
+                    "transactions": {
+                        []
+                    }
+                }
+            ]
+        }
+    ]
+}
+
+
+//Request (JSON) CFPS->client
+
+200 OK
+{
+    "cards": [
+        { 
+            // "issue_at": "DATE",// date "yyyy-mm-dd"
+            // "expire_at": "DATE",// date "yyyy-mm-dd"
+            "card_name": "SuperCard",
+            "card_type": "Visa", // "enum", one of VISA/MC(Master Card)<...>
+            "card_number": "1234",
+            "amount": "15.00",
+            "current_id": "eur", // "enum", one of rub, eur, usd<...>
+            "accounts": [
+                {
+                    "current_id": "eur", // "enum", one of rub, eur, usd<...>
+                    "last_amount": "15000.00",
+                    "transactions": [
+                        {
+                            // "transaction_at": "DATE",// date "yyyy-mm-dd"
+                            "amount": "100.87",
+                            "current_id": "eur", // "enum", one of rub, eur, usd<...>
+                            "type": "credit", // credit = "-"
+                            "name": "Carefour"
+                        },
+                        {
+                            // "transaction_at": "DATE",// date "yyyy-mm-dd"
+                            "amount": "100.87",
+                            "current_id": "eur", // "enum", one of rub, eur, usd<...>
+                            "type": "debit", // debit = "+"
+                            "name": "Salary"
+                        },
+                        {
+                            // "transaction_at": "DATE",// date "yyyy-mm-dd"
+                            "amount": "100.87",
+                            "current_id": "eur", // "enum", one of rub, eur, usd<...>
+                            "type": "credit", // credit = "-"
+                            "name": "Carefour"
+                        },
+                        {
+                            // "transaction_at": "DATE",// date "yyyy-mm-dd"
+                            "amount": "100.87",
+                            "current_id": "eur", // "enum", one of rub, eur, usd<...>
+                            "type": "debit", // debit = "+"
+                            "name": "Golden crow"
+                        }
+                    ]
+                },
+            ]
+        },
+        { 
+            // "issue_at": "DATE",// date "yyyy-mm-dd"
+            // "expire_at": "DATE",// date "yyyy-mm-dd"
+            "card_name": "Uberard",
+            "card_type": "MC", // "enum", one of VISA/MC(Master Card)<...>
+            "card_number": "4321",
+            "amount": "17.00",
+            "current_id": "eur", // "enum", one of rub, eur, usd<...>
+            "accounts": [
+                {
+                    "transactions": {
+                        []
+                    }
+                }
+            ]
+        }
+    ]
+}

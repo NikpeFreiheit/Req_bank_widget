@@ -1,0 +1,67 @@
+//Фильтрация и сортировка по имени, типу карты и т.д. реализуется на стороне Front
+//Request (JSONSchema) Bank->CFPS
+
+200 OK
+{
+    "cards": [
+        {
+            "issue_at": "DATE", // date "yyyy-mm-dd"
+            "expire_at": "DATE", // date "yyyy-mm-dd"
+            "card_name": "string",
+            "card_type": "enum", // VISA/MC(Master Card)<...>
+            "card_number": "string",
+            "amount": "string",
+            "current_id": "enum", // rub,eur, usd<...>
+            "accounts": [
+                {
+                    "current_id": "enum", // rub,eur, usd<...>
+                    "last_amount": "string",
+                    "transactions": [
+                        {
+                            "id": "string",
+                            "transaction_at": "DATE", // date "yyyy-mm-dd"
+                            "amount": "string",
+                            "current_id": "enum", // rub,eur, usd<...>
+                            "type": "enum", // credit/debit (+,-)
+                            "name": "enum", // carefour,salary<...>
+                        }
+                    ]
+                },
+            ]
+        }
+    ]
+}
+
+
+//Request (JSONSchema) CFPS->client
+
+200 OK
+{
+    "cards": [
+        {
+            "issue_at": "DATE", // date "yyyy-mm-dd"
+            "expire_at": "DATE", // date "yyyy-mm-dd"
+            "card_name": "string",
+            "card_type": "enum", // VISA/MC(Master Card)<...>
+            "card_number": "string",
+            "amount": "string",
+            "current_id": "enum", // rub,eur, usd<...>
+            "accounts": [
+                {
+                    "current_id": "enum", // rub,eur, usd<...>
+                    "last_amount": "string",
+                    "transactions": [
+                        {
+                            "id": "string",
+                            "transaction_at": "DATE",
+                            "amount": "string",
+                            "current_id": "enum", // rub,eur, usd<...>
+                            "type": "enum", // credit/debit (+,-)
+                            "name": "enum", // carefour,salary<...>
+                        }
+                    ]
+                },
+            ]
+        }
+    ]
+}
