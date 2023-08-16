@@ -1,35 +1,35 @@
-//В запросе нужна фильтрация данных, указанная в параметрах URL:
-//Какой счет отобразить (возможно тут еще указать валюту, потому что есть мультивалютные счета)
-//Какие карты отобразить (привязанные к счету или все карты)
-//Какие транзакции и их количество (по каким картам? Отображенным или всем?)
+//  В запросе нужна фильтрация данных, указанная в параметрах URL:
+///  Какой счет отобразить (возможно тут еще указать валюту, потому что есть мультивалютные счета)
+///  Какие карты отобразить (привязанные к счету или все карты)
+///  Какие транзакции и их количество (по каким картам? Отображенным или всем?)
 
-//Response (JSON) Client->CFPS
+//Response (JSON) Client->App
 
-GET http://CFPS.com/account  
+GET http://App.com/account  
 HTTP/1.1
 Host: CFPS.com
 
-GET http://CFPS.com/cards  
+GET http://App.com/cards  
 HTTP/1.1
 Host: CFPS.com
 
-GET http://CFPS.com/transaction  
+GET http://App.com/transaction  
 HTTP/1.1
-Host: CFPS.com
+Host: App.com
 
 
-//Response (JSON) CFPS->Bank
+//Response (JSON) App->Bank
 
-GET http://unlimit_bank.com/account   
+GET http://bank.com/account   
 HTTP/1.1
-Host: unlimit_bank.com
+Host: bank.com
 
-GET http://unlimit_bank.com/cards   
+GET http://bank.com/cards   
 HTTP/1.1
-Host: unlimit_bank.com
+Host: bank.com
 
-GET http://unlimit_bank.com/transaction  
+GET http://bank.com/transaction  
 HTTP/1.1
-Host: unlimit_bank.com
+Host: bank.com
 
 
