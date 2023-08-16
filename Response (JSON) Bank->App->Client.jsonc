@@ -1,6 +1,6 @@
 //Фильтрация и сортировка по имени, типу карты и т.д. реализуется на стороне Front
 
-//Request (JSON) Bank->CFPS
+//Request (JSON) Bank->App
 
 200 OK
 {
@@ -70,7 +70,7 @@
 }
 
 
-//Request (JSON) CFPS->client
+//Request (JSON) App->client
 
 200 OK
 {
