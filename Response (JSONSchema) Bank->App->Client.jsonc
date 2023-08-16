@@ -1,5 +1,5 @@
 //Фильтрация и сортировка по имени, типу карты и т.д. реализуется на стороне Front
-//Request (JSONSchema) Bank->CFPS
+//Request (JSONSchema) Bank->App
 
 200 OK
 {
@@ -33,7 +33,7 @@
 }
 
 
-//Request (JSONSchema) CFPS->client
+//Request (JSONSchema) App->client
 
 200 OK
 {
