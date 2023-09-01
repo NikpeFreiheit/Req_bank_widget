@@ -7,11 +7,11 @@
 
 GET http://App.com/account  
 HTTP/1.1
-Host: CFPS.com
+Host: App.com
 
 GET http://App.com/cards  
 HTTP/1.1
-Host: CFPS.com
+Host: App.com
 
 GET http://App.com/transaction  
 HTTP/1.1
