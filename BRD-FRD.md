@@ -40,18 +40,18 @@ The widget should display:
 2. Account currency
 
 **2. “Cards”**
-Виджет должен отображать:
-Все карты, открытые у данного клиента:
-1. Наименование карты
-2. Тип карты
-3. Номер карты (скрытый, кроме последних 4-х символов)
-4. Доступный остаток по карте
-5. Валюта карты
+The widget should display:
+All open client cards:
+1. Card name
+2. Card type
+3. Last 4 symbols of card number
+4. Card balance
+5. Currency code
 
 **3. "Transaction"**
 
-Виджет должен отображать последние 5 транзакций:
-1. Иконку транзакции
-2. Наименование транзакции
-3. Сумму транзакции с указанием пополнения или снятия средств со света
-4. Валюту транзакции
+The widget should display last 5 transaction:
+1. Tarsaction icon
+2. Tarsaction name
+3. Transaction amount indicating deposits or withdrawals from the account
+4. Currency code of transaction
